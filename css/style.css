@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    --light-green: #00606B;
+    --dark-green: #00373F;
+    --yellow: #F8BF88;
+    --grey1: #F4F4F4;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;padding:0;
+    background-color: #F6F7F9;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+/* NAV */
+
+.nav {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.25);
+}
+
+.nav .logo {
+    margin: 20px 0 0 55px;
+}
+
+.nav-items {
+    margin: 40px 0 0 -40px;
+}
+
+.nav-item li {
+    display: inline;
+}
+
+.nav-item {
+    color: var(--light-green);
+    background-color: var(--grey1);
+    padding: 10px 70px;
+    border-radius: 0 20px 20px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+    outline: none;
+}
+
+.nav-item:hover {
+    color: var(--yellow);
+    background-color: var(--light-green);
+}
+
+.nav-item:hover svg.nonactive {
+    display: none;
+}
+.nav-item:hover svg.active {
+    display: inline;
+}
+
+.nav-item.active {
+    color: var(--yellow);
+    background-color: var(--light-green);
+}
+
+.nav-item svg.active {
+    display: none;
+}
+
+.nav-item svg.nonactive {
+    display: inline;
+}
+
+.nav-item.active svg.active {
+    display: inline;
+}
+
+.nav-item.active svg.nonactive {
+    display: none;
+}
+
+.nav-item li {
+    list-style: none;
+}
+
+.nav .account {
+    position: absolute;
+    width: 210px;
+    bottom: 0;
+    height: 40px;
+    padding: 20px;
+    background-color: var(--light-green);
+}
+
+.nav .account .left {
+    float: left;
+    color: var(--yellow);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    outline: none;
+}
+
+.nav .account .identity {
+    text-transform: uppercase;
+}
+
+.nav .account .id-account {
+    color: #fff;
+    opacity: 50%;
+    font-size: 13px;
+}
+
+.nav .account .logout {
+    position: absolute;
+    bottom: 25px;
+    left: 200px;
+    outline: none;
+}
+
+/* Container - Home */
+
+.container {
+    padding: 40px 40px 40px 300px;
+}
+
+.container .title {
+    color: var(--dark-green);
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.head {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 -2px;
+}
+
+.head .sayhello {
+    color: var(--light-green);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.head .sayhello b {
+    text-transform: uppercase;
+}
+
+.head .sayhello .last-connection {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.head .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 3;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+}
+
+.head .buttons .button {
+    color: var(--dark-green);
+    height: 80px;
+    margin: 0 0 0 20px;
+    padding: 35px 85px;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.head .buttons .button:active, .head .buttons .button:focus {
+    outline: var(--light-green) solid 2px;
+}
+
+.head .buttons .button svg {
+    margin-left: 5px;
+}
+
+.head .buttons .button span {
+    position: absolute;
+    margin: 60px 0 0 -105px;
+}
+
+.main-account {
+    color: #fff;
+    width: 600px;
+    margin: 40px 10px 0 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--light-green);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+
+.main-account .title {
+    color: #fff;
+}
+
+.main-account .title strong {
+    float: right;
+    margin: 10px 0 0 0;
+    font-size: 13px;
+}
+
+.main-account .account {
+    color: var(--dark-green);
+    margin: 0 0 50px 0;
+    padding: 50px 30px;
+    border-radius: 7.5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.main-account .account .total {
+    user-select: text;
+    color: var(--dark-green);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.main-account .account .total strong {
+    color: var(--light-green);
+    font-size: 40px;
+}
+
+.main-account .account .separator {
+    float: right;
+    width: 2px;
+    height: 100px;
+    margin: -80px 150px 0 0;
+    border-radius: 2px;
+    background-color: var(--dark-green);
+}
+
+.main-account .account .evolution {
+    color: var(--light-green);
+    float: right;
+    margin: -55px -140px 0 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.main-account .account .evolution .backgound-indice {
+    opacity: 25%;
+    margin: -65px 0 0 10px;
+}
+
+.main-account .last-op .title {
+    width: 120px;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.main-account .last-op .separator {
+    float: left;
+    width: 2px;
+    height: 100px;
+    margin: -80px 0 0 130px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.main-account .last-op .ops {
+    margin: -85px 0 20px 105px;
+    list-style: none;
+}
+
+.main-account .last-op .op {
+    margin: 0 0 10px 0;
+}
+
+.main-account .last-op .op .date, .main-account .last-op .op .info, .main-account .last-op .op .dir, .main-account .last-op .op .amount {
+    display: inline-block;
+    font-weight: 700;
+}
+
+.main-account .last-op .op .date {
+    opacity: 75%;
+}
+
+.main-account .last-op .op .dir {
+    margin: 0 5px 0 5px
+}
+
+.main-account .last-op .op .amount strong {
+    font-size: 10px;
+}
+
+.main-account .about-plus {
+    color: #fff;
+    margin: 0 0 0 205px;
+    font-weight: 700;
+    text-decoration: none;
+    outline: none;
+}
+
+.main-account .about-plus .points, .main-account .about-plus span {
+    display: inline;
+}
+
+.main-account .about-plus .points {
+    padding: 0 0 10px 0;
+}
+
+.main-account .about-plus .points svg {
+    margin: 0 5px 3px 0;
+}
+
+.lists-accounts {
+    float: right;
+    margin: -426px 0 0 0;
+}
+
+.lists-accounts .saving, .lists-accounts .insurance, .lists-accounts .credit {
+    margin: 0 0 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lists-accounts .main {
+    position: relative;
+    cursor: pointer;
+    color: var(--light-green);
+    padding: 15px 20px 15px 115px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.lists-accounts .insurance .main {
+    padding: 15px 20px 15px 115px;
+}
+
+.lists-accounts .credit .main {
+    padding: 15px 20px 15px 115px;
+}
+
+.lists-accounts span, .lists-accounts .dropdown-icon {
+    display: inline-block;
+}
+
+.lists-accounts .insurance .main span {
+    margin-left: 25px;
+}
+
+.lists-accounts .credit .main span {
+    margin-left: 43.5px;
+}
+
+.lists-accounts .dropdown-icon {
+    margin-left: 95px;
+    transition: all .2s ease-in-out;
+}
+
+.lists-accounts .insurance .dropdown-icon {
+    margin-left: 124px;
+}
+
+.lists-accounts .credit .dropdown-icon {
+    margin-left: 141px;
+}
+
+.lists-accounts .main .dropdown-icon.active {
+    transform: rotate(180deg);
+    transition: all .2s ease-in-out;
+}
+
+.lists-accounts .list {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    color: var(--light-green);
+    margin: -15px 0 0 0;
+    padding: 15px 10px 10px 10px;
+    font-weight: 700;
+    background-color: #fff;
+    border: 1px solid var(--dark-green);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    animation: spawn-list 1s linear;
+    transition: all .2s ease-in-out;
+    z-index: 1;
+}
+
+.lists-accounts .list.active {
+    display: block;
+}
+
+.lists-accounts .list ul {
+    margin: 20px 0 7px 0;
+}
+
+.lists-accounts .list li {
+    width: 400px;
+    margin: 0 0 20px -40px;
+    padding: 10px 0px 10px 12px;
+    border-radius: 7.5px;
+    list-style: none;
+    transition: all .2s ease-in-out;
+}
+
+.lists-accounts .list li:hover {
+    background-color: rgb(238, 236, 236);
+}
+
+.lists-accounts .list a {
+    text-decoration: none;
+}
+
+.lists-accounts .list a li .title {
+    font-size: 20px;
+}
+
+.lists-accounts .list a li .account-number {
+    opacity: 75%;
+    color: var(--light-green);
+    margin: -25px 0 0 0;
+    font-size: 13px;
+}
+
+.lists-accounts .list a li .amount {
+    float: right;
+    color: var(--dark-green);
+    margin: -27px 12px 0 0;
+    font-size: 20px;
+}
+
+.lists-accounts .list a li .amount strong {
+    font-size: 15px;
+}
+
+.lists-accounts .list a li .price-insurance {
+    float: right;
+    color: var(--dark-green);
+    margin: -27px 12px 0 0;
+    font-size: 20px;
+}
+
+.lists-accounts .list a li .price-insurance strong {
+    font-size: 15px;
+}
+
+.lists-accounts .list a li .price-insurance span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+@keyframes spawn-list {
+    0% {
+        margin: -100% 0 0 0;
+    }
+
+    100% {
+        margin: -15px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 1430px) {
+    .buttons {
+        left: 250px;
+        right: 0;
+        margin: 190px 0 0 0;
+    }
+
+    .main-account {
+        margin: 220px 10px 0 0;
+    }
+
+    .lists-accounts {
+        float: left;
+        margin: 30px 0 0 100px;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .buttons {
+        display: block!important;
+        width: 250px;
+        margin: 0px 0 0 400px;
+    }
+
+    .button {
+        display: none!important;
+    }
+
+    .button.card {
+        display: block!important;
+        width: 40px;
+        padding: 35px 85px!important;
+    }
+
+    .main-account {
+        margin: 40px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .buttons {
+        display: block!important;
+        width: 250px;
+        margin: 195px 0 0 120px;
+    }
+
+    .main-account {
+        width: 345px;
+        margin: 225px 0 0 0;
+    }
+
+    .main-account .account {
+        height: 160px;
+        margin: 50px 0 50px 0;
+        padding: 30px 30px;
+    }
+
+    .main-account .account .total {
+        font-size: 40px;
+    }
+
+    .main-account .account .total strong {
+        font-size: 30px;
+    }
+
+    .main-account .account .separator {
+        float: left;
+        width: 280px;
+        height: 2px;
+        margin: 20px 0 0 0;
+    }
+
+    .main-account .account .evolution {
+        float: left;
+        margin: 30px 0 0 75px;
+    }
+
+    .main-account .last-op .title {
+        text-align: center;
+        width: 190px;
+        margin: -20px 0 0 75px;
+        padding: 0;
+        font-size: 17px;
+    }
+
+    .main-account .last-op .separator {
+        float: left;
+        width: 100px;
+        height: 2px;
+        margin: 20px 0 0 120px;
+    }
+
+    .main-account .last-op .ops {
+        margin: 50px 0 20px -20px;
+    }
+
+    .main-account .about-plus {
+        margin: 0 0 0 75px;
+    }
+}
