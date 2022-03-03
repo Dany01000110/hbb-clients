@@ -121,6 +121,10 @@ body {
     outline: none;
 }
 
+.open-nav, .close-nav {
+    display: none;
+}
+
 /* Container - Home */
 
 .container {
@@ -564,5 +568,76 @@ body {
 
     .main-account .about-plus {
         margin: 0 0 0 75px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .nav {
+        display: none;
+        transition: all .2s ease-in-out;
+    }
+
+    .nav.active {
+        display: block;
+        transition: all .2s ease-in-out;
+        z-index: 9999;
+    }
+
+    .open-nav.active, .close-nav.active {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        top: 20px;
+        width: 20px;
+        padding: 18px 16px 18px 15px;
+        border-radius: 0 30px 30px 0;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+    }
+
+    .container {
+        padding:20px;
+        width: 385px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .2s ease-in-out;
+    }
+
+    .container.nav-active {
+        padding:20px;
+        width: 385px;
+        position: relative;
+        left: calc(250px + 50%);
+        transform: translateX(-50%);
+    }
+
+    .head .buttons {
+        margin: 0 0 -125px 45px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .lists-accounts {
+        margin: 30px 0 0 0;
+    }
+
+    .lists-accounts .main, .lists-accounts .insurance .main, .lists-accounts .credit .main {
+        padding: 15px 123px 15px 75px!important;
+    }
+
+    .lists-accounts .main .dropdown-icon {
+        float: right;
+        margin: 0px -95px 0 0;
+    }
+
+    .lists-accounts .list li {
+        width: 350px;
+    }
+
+    .list.list-credit.active .amount {
+        margin: -20px 12px 0 0;
+        font-size: 15px;
     }
 }
