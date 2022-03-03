@@ -40,7 +40,7 @@ body {
 .nav-item {
     color: var(--light-green);
     background-color: var(--grey1);
-    padding: 10px 70px;
+    padding: 10px 60.3px;
     border-radius: 0 20px 20px 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -502,6 +502,7 @@ body {
     height: 50px;
     margin: -20px 0 0 0;
     padding: 0 20px 0 20px;
+    border: none;
     border-radius: 7.5px;
     font-size: 14px;
     font-weight: 700;
@@ -587,6 +588,20 @@ input[type=number]::-webkit-outer-spin-button {
     border: none;
     border-radius: 7.5px;
     background-color: var(--dark-green);
+    transition: all .2s ease-in-out;
+}
+
+.transfer-box input[type="submit"]:focus, .transfer-box input[type="submit"]:hover {
+    color: var(--yellow);
+    cursor: pointer;
+    width: 550px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 7.5px;
+    background-color: #01343b;
+    outline: 3px solid #009fb13b;
 }
 
 @keyframes spawn-list {
