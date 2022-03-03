@@ -641,6 +641,10 @@ input[type=number]::-webkit-outer-spin-button {
         width: 350px;
     }
 
+    .transfer-box .input .debtor-select:hover {
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+
     .transfer-box .input .receiver-input, .transfer-box .input .amount-input {
         width: 310px;
     }
