@@ -784,8 +784,24 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 23px;
 }
 
+.mycard .content .card-options .save-button {
+    position: relative;
+    float: right;
+    top: -25px;
+    color: var(--light-green);
+    padding: 5px 5px 5px 30px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-image: url("../assets/save.svg");
+    background-repeat: no-repeat;
+    background-position-x: 7px;
+    background-position-y: 6px;
+    background-size: 1em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
 .mycard .content .card-options .option {
-    margin: 20px 0 15px 0;
+    margin: 29px 0 15px 0;
     border-radius: 7.5px;
     background-color: var(--dark-green);
     box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
@@ -1034,6 +1050,29 @@ input[type=number]::-webkit-outer-spin-button {
         float: left;
         margin: 30px 0 0 100px;
     }
+
+    .mycard .content {
+        position: relative;
+        width: 400px;
+        height: 820px;
+        margin: 10px 0 0 0;
+        padding: 40px 40px 15px 40px;
+    }
+
+    .mycard .content .card-detail {
+        position: relative;
+        width: 350px;
+        top: 15px;
+        left: 25px;
+        border-radius: 10px 10px 20px 20px;
+    }
+
+    .mycard .content .card-options {
+        float: left;
+        width: 350px;
+        margin: 60px 0 0 -5px;
+        padding: 30px;
+    }
 }
 
 @media screen and (max-width: 1010px) {
@@ -1229,5 +1268,61 @@ input[type=number]::-webkit-outer-spin-button {
 
     .documents .doc {
         margin: 0 0 20px 0!important;
+    }
+
+    .mycard .content {
+        position: relative;
+        width: 300px;
+        height: 840px;
+        margin: 10px 0 0 0;
+        padding: 40px 40px 15px 40px;
+    }
+
+    .mycard .content .card-detail {
+        position: relative;
+        width: 250px;
+        top: 15px;
+        left: 25px;
+        border-radius: 10px 10px 20px 20px;
+    }
+
+    .mycard .content .card-detail .card .num {
+        color: #fff;
+        margin-top: 14px;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .mycard .content .card-options {
+        float: left;
+        width: 250px;
+        margin: 60px 0 0 -5px;
+        padding: 30px;
+    }
+
+    .mycard .content .card-detail .card .identity, .mycard .content .card-detail .card .date-valid {
+        color: #fff;
+        margin-top: 0px;
+        font-size: 11px;
+        font-weight: 500;
+        opacity: 50%;
+    }
+    
+    .mycard .content .card-detail .card .date-valid {
+        float: right;
+        margin-top: -15px;
+    }
+
+    .mycard .content .option-select .statut {
+        position: relative;
+        top: 5px;
+    }
+
+    .mycard .content.options {
+        height: 125px!important;
+    }
+
+    .switch {
+        top: -12px!important;
     }
 }
