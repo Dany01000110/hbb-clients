@@ -26,7 +26,9 @@ body {
 }
 
 .nav .logo {
-    margin: 20px 0 0 55px;
+    position: relative;
+    top: 10px;
+    left: 55px;
 }
 
 .nav-items {
@@ -647,7 +649,364 @@ input[type=number]::-webkit-outer-spin-button {
 
 .documents .description {
     color: var(--light-green);
+    width: 270px;
+    height: 58px;
     margin: 20px 0 0 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* My card */
+
+.mycard {
+    width: 980px;
+    margin: 40px auto 0 auto;
+}
+
+.mycard .return {
+    color: #fff;
+    padding: 10px 15px 30px 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px 10px 0 10px;
+    background-color: var(--dark-green);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    background-image: url("../assets/return.svg");
+    background-repeat: no-repeat;
+    background-position-x: 15px;
+    background-position-y: 11px;
+    background-size: 1.2em;
+    transition: all .2s ease-in-out;
+}
+
+.mycard .return:focus, .mycard .return:hover {
+    outline: 3px solid #00606b81;
+}
+
+.mycard .content {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    margin: 10px 0 0 0;
+    padding: 40px 40px 15px 40px;
+    border-radius: 10px;
+    background-color: var(--light-green);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.mycard .content .title {
+    color: var(--yellow);
+    margin-top: -20px;
+}
+
+.mycard .content .card-detail {
+    position: relative;
+    width: 350px;
+    top: 90px;
+    border-radius: 10px 10px 20px 20px;
+    background-color: var(--yellow);
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.mycard .content .card-detail .title {
+    color: var(--light-green);
+    margin: 0 0 20px 0;
+    padding: 10px 0 10px 0;
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mycard .content .card-detail .card {
+    margin: -20px 0 0 0;
+    padding: 40px 40px 35px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, var(--dark-green) 0%, var(--light-green) 100%);
+}
+
+.mycard .content .card-detail .card .puce {
+    width: 60px;
+    height: 45px;
+    background-image: url("../assets/puce.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mycard .content .card-detail .card .mastercard {
+    float: right;
+    width: 55px;
+    height: 35px;
+    margin: -40px 0 0 0;
+    background-image: url("../assets/mastercard.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mycard .content .card-detail .card .num {
+    color: #fff;
+    margin-top: 40px;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.mycard .content .card-detail .card .identity, .mycard .content .card-detail .card .date-valid {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 50%;
+}
+
+.mycard .content .card-detail .card .date-valid {
+    float: right;
+    margin-top: -19px;
+}
+
+.mycard .content .card-options {
+    float: right;
+    width: 450px;
+    margin: -260px 0 0 0;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.mycard .content .card-options .title {
+    color: var(--dark-green);
+    margin: -6.5px 0 0 0;
+    font-size: 23px;
+}
+
+.mycard .content .card-options .option {
+    margin: 20px 0 15px 0;
+    border-radius: 7.5px;
+    background-color: var(--dark-green);
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+    overflow: hidden;
+}
+
+.mycard .content .card-options .option .title {
+    color: var(--yellow);
+    font-size: 1em;
+    margin: 10px 0 0 10px;
+}
+
+.mycard .content .card-options .option .total {
+    float: right;
+    color: #fff;
+    margin: -18px 10px 0 0;
+    font-size: 1em;
+    font-weight: 600;
+    user-select: text;
+}
+
+.mycard .content .card-options .option .total span {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.mycard .content .card-options .option .content {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border-radius: 7.5px 7.5px 0 0;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 5px rgb(0 0 0 / 25%);
+}
+
+.mycard .content .card-options .option .progress-bar {
+    height: 15px;
+    margin: 0 0 10px 0;
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    box-shadow: inset 0px 0px 3px rgb(0 0 0 / 25%);
+}
+
+.mycard .content .card-options .option .progress-bar .progress {
+    width: 100%;
+    height: 15px;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #00555F 0%, #003F47 100%);
+    box-shadow: 0px 0px 5px rgba(0, 15, 17, 0.24), inset -1.5367e-16px -2.50963px 2.50963px #003C44, inset 1.5367e-16px 2.50963px 2.50963px #005863;
+    transition: all .2s ease-in-out;
+}
+
+.mycard .content .card-options .option .expense {
+    height: 30px;
+    color: var(--light-green);
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mycard .content .card-options .option .expense strong {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.mycard .content .card-options .option .expense span {
+    position: relative;
+    top: -10px;
+    font-size: 11.5px;
+    font-weight: 600;
+}
+
+.mycard .content .card-options .option .expense-total {
+    float: right;
+    height: 30px;
+    margin: -30px 0 0 0;
+    color: var(--dark-green);
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mycard .content .card-options .option .expense-total strong {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.mycard .content .card-options .option .expense-total span {
+    position: relative;
+    top: -10px;
+    right: -20px;
+    font-size: 11.5px;
+    font-weight: 600;
+}
+
+.mycard .content .card-options .option .option-select .title {
+    color: var(--dark-green);
+}
+
+.mycard .content .card-options .option .option-select .statut {
+    margin: 0 0 0 10px;
+    font-size: 13px;
+}
+
+.mycard .content .card-options .option .option-select .statut.active {
+    color: var(--light-green);
+    padding: 0 0 0 20px;
+    font-weight: 600;
+    background-image: url("../assets/active.svg");
+    background-repeat: no-repeat;
+    background-position-x: 3px;
+    background-position-y: 2px;
+    background-size: 1em;
+}
+
+.mycard .content .card-options .option .option-select .statut.disabled {
+    color: rgba(0, 0, 0, 0.25);
+    padding: 0 0 0 20px;
+    font-weight: 600;
+    background-image: url("../assets/disabled.svg");
+    background-repeat: no-repeat;
+    background-position-x: 3px;
+    background-position-y: 2px;
+    background-size: 1em;
+}
+
+/* Switch On/Off */
+
+.switch {
+    --line: #E8EBFB;
+    --dot: #00373F;
+    --circle: #dddddd;
+    --background: #fff;
+    --duration: 0.3s;
+    --text: #9EA0BE;
+    --shadow: 0 1px 3px rgba(0, 9, 61, 0.08);
+    cursor: pointer;
+    position: relative;
+}
+
+.switch:before {
+    content: '';
+    width: 50px;
+    height: 22px;
+    border-radius: 16px;
+    background: var(--background);
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: var(--shadow);
+}
+
+.switch input {
+    display: none;
+}
+
+.switch input + div {
+    position: relative;
+}
+
+.switch input + div:before, .switch input + div:after {
+    --s: 1;
+    content: '';
+    position: absolute;
+    height: 4px;
+    top: 9.5px;
+    width: 23px;
+    background: var(--line);
+    transform: scaleX(var(--s));
+    transition: transform var(--duration) ease;
+}
+
+.switch input + div:before {
+    --s: 0;
+    left: 4px;
+    transform-origin: 0 50%;
+    border-radius: 2px 0 0 2px;
+}
+
+.switch input + div:after {
+    left: 23px;
+    transform-origin: 100% 50%;
+    border-radius: 0 2px 2px 0;
+}
+
+.switch input + div span {
+    padding-left: 60px;
+    line-height: 28px;
+    color: var(--text);
+}
+
+.switch input + div span:before {
+    --x: 0;
+    --b: var(--circle);
+    --s: 4px;
+    content: '';
+    position: absolute;
+    left: 1.5px;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 var(--s) var(--b);
+    transform: translateX(var(--x));
+    transition: box-shadow var(--duration) ease, transform var(--duration) ease;
+}
+
+.switch input + div span:not(:empty) {
+    padding-left: 68px;
+}
+
+.switch input:checked + div:before {
+    --s: 1;
+}
+
+.switch input:checked + div:after {
+    --s: 0;
+}
+
+.switch input:checked + div span:before {
+    --x: 28px;
+    --s: 12px;
+    --b: var(--dot);
 }
 
 @keyframes spawn-list {
@@ -859,5 +1218,16 @@ input[type=number]::-webkit-outer-spin-button {
     .list.list-credit.active .amount {
         margin: -20px 12px 0 0;
         font-size: 15px;
+    }
+
+    .documents {
+        position: relative;
+        width: 330px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .documents .doc {
+        margin: 0 0 20px 0!important;
     }
 }
