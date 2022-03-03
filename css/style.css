@@ -1300,6 +1300,10 @@ input[type=number]::-webkit-outer-spin-button {
         padding: 30px;
     }
 
+    .mycard .content .card-options .option {
+        margin: 35px 0 15px 0;
+    }
+
     .mycard .content .card-detail .card .identity, .mycard .content .card-detail .card .date-valid {
         color: #fff;
         margin-top: 0px;
