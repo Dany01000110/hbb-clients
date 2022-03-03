@@ -592,16 +592,62 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .transfer-box input[type="submit"]:focus, .transfer-box input[type="submit"]:hover {
-    color: var(--yellow);
-    cursor: pointer;
-    width: 550px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 600;
-    border: none;
-    border-radius: 7.5px;
     background-color: #01343b;
     outline: 3px solid #009fb13b;
+}
+
+/* Documents */
+
+.documents {
+    display: block;
+    margin: 40px 0 0 0;
+}
+
+.documents .doc {
+    display: inline-block;
+    width: 270px;
+    margin: 0 0 20px 20px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(0, 0, 0, 0.25)
+}
+
+.documents .doc .icon svg {
+    margin: 20px 0 30px 70px;
+}
+
+.documents .doc .title {
+    display: inline;
+    font-weight: 700;
+}
+
+.documents .doc .download {
+    color: #fff;
+    float: right;
+    display: inline;
+    margin: 7px 0 0 0;
+    padding: 5px 10px 5px 27px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2.5px;
+    background-color: var(--dark-green);
+    background-image: url("../assets/download.svg");
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 6.5px;
+    background-size: 0.9em;
+    transition: all .2s ease-in-out;
+}
+
+.documents .doc .download:focus, .documents .doc .download:hover {
+    outline: 2px solid #00606b81;
+}
+
+.documents .description {
+    color: var(--light-green);
+    margin: 20px 0 0 0;
 }
 
 @keyframes spawn-list {
