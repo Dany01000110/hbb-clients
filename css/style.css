@@ -1034,6 +1034,220 @@ input[type=number]::-webkit-outer-spin-button {
     --b: var(--dot);
 }
 
+/* Profile page */
+
+.return-button {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border-radius: 7.5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.return-button .icon, .return-button span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.return-button .icon {
+    width: 18px;
+    padding: 2px 0 0 0;
+}
+
+.return-button span {
+    color: var(--dark-green);
+    margin: 0 0 0 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.profile {
+    position: absolute;
+    top: calc(20px + 50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 530px;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: var(--light-green);
+}
+
+.profile .title {
+    color: var(--yellow);
+    margin: -10px 0 30px 0;
+}
+
+.profile .input {
+    padding: 10px 0 0 0;
+    margin-bottom: 15px;
+    border-radius: 7.5px;
+    background-color: var(--dark-green);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.profile .input .title {
+    margin: 0 0 10px 10px;
+    font-size: 15px;
+}
+
+.profile .input input {
+    cursor: text;
+    color: var(--light-green);
+    width: 410px;
+    height: 50px;
+    margin-top: 0px;
+    padding: 0 20px 0 20px;
+    border: none;
+    border-radius: 7.5px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 5px rgb(0 0 0 / 25%);
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.profile .input input:disabled {
+    cursor: not-allowed;
+    color: #00606b80;
+}
+
+.profile .input input:disabled::placeholder {
+    cursor: not-allowed;
+    color: var(--light-green);
+    opacity: 0.5;
+}
+
+.profile .input input:focus, .profile .input input:hover {
+    height: 45px;
+    border-top: 5px inset #0ea5b6;
+    transition: all .2s ease-in-out;
+}
+
+.profile .input input:disabled:focus, .profile .input input:disabled:hover {
+    height: 45px;
+    border-top: 5px inset #0ea5b67e;
+    transition: all .2s ease-in-out;
+}
+
+.profile .input.identity #firstname {
+    width: 180px;
+}
+
+.profile .input.identity #lastname {
+    float: right;
+    width: 180px;
+}
+
+.profile .input.others #tel {
+    width: 180px;
+}
+
+.profile .input.others #birthday {
+    float: right;
+    width: 180px;
+}
+
+.profile button[type="submit"] {
+    color: var(--yellow);
+    cursor: pointer;
+    width: 220px;
+    height: 50px;
+    margin: 10px 0 0 0;
+    padding: 0 0 4px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    border-radius: 7.5px;
+    background-color: var(--dark-green);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    transition: all .2s ease-in-out;
+}
+
+.profile button[type="submit"].changemdp {
+    width: 450px;
+}
+
+.profile button[type="submit"] svg {
+    position: relative;
+    top: 3.5px;
+}
+
+.profile button[type="submit"] span {
+    position: relative;
+    top: 2px;
+    left: 5px;
+}
+
+.profile .mdp-change {
+    position: relative;
+    color: var(--yellow);
+    top: 2px;
+    left: 5px;
+    padding: 13px 42px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #00373f80;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    transition: all .2s ease-in-out;
+}
+
+.profile .mdp-change svg {
+    position: relative;
+    top: 3.5px;
+    left: -4px;
+}
+
+.profile .mdp-change span {
+    position: relative;
+    top: 1px;
+    left: 5px;
+}
+
+.profile .input .showpassword {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: -33px;
+    right: 20px;
+}
+
+.profile .input .hiddepassword {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: -37px;
+    right: 20px;
+}
+
+.profile .input .showpassword.hidden, .profile .input .hiddepassword.hidden {
+    display: none;
+}
+
+.profile .input .showpassword:hover svg path, .profile .input .hiddepassword:hover svg path {
+    transition: all .2s ease;
+}
+
+.profile .input .showpassword:hover svg path, .profile .input .hiddepassword:hover svg path {
+    fill: #00373F!important;
+    transition: all .2s ease;
+}
+
+.profile .input .hiddepassword:hover svg path:last-child {
+    stroke: #00373F!important;
+}
+
 @keyframes spawn-list {
     0% {
         margin: -100% 0 0 0;
@@ -1337,5 +1551,75 @@ input[type=number]::-webkit-outer-spin-button {
 
     .switch {
         top: -12px!important;
+    }
+
+    .return-button {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 320px;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        border-radius: 7.5px;
+        background-color: #fff;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+        z-index: 1;
+    }    
+
+    .profile {
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+        height: 530px;
+        padding: 50px;
+        border-radius: 20px;
+        background-color: var(--light-green);
+    }
+
+    .profile.changemdp {
+        height: 410px!important;
+    }
+
+    .profile .title {
+        font-size: 1.5em;
+    }
+
+    .profile .input input {
+        width: 360px;
+    }
+
+    .profile button[type="submit"].changemdp {
+        margin: 0 0 -20px 0;
+        width: 400px;
+        font-size: 1em;
+    }
+
+    .profile .input.identity #firstname {
+        width: 155px;
+    }
+    
+    .profile .input.identity #lastname {
+        float: right;
+        width: 155px;
+    }
+    
+    .profile .input.others #tel {
+        width: 155px;
+    }
+    
+    .profile .input.others #birthday {
+        float: right;
+        width: 155px;
+    }
+
+    .profile button[type="submit"] {
+        width: 195px;
+    }
+
+    .profile .mdp-change {
+        padding: 13px 31px;
     }
 }

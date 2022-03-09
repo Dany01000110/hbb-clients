@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86, shrink-to-fit=no">
+    <title>HBB - Panel Client | Virement</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container" style="padding:40px!important;">
+        <a class="return-button" onclick="history.back()">
+            <div class="icon">
+                <svg viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9.5L1.94639 8.43234L0.864491 9.5L1.94639 10.5677L3 9.5ZM22 11C22.8284 11 23.5 10.3284 23.5 9.5C23.5 8.67157 22.8284 8 22 8V11ZM9.54639 0.932339L1.94639 8.43234L4.05361 10.5677L11.6536 3.06766L9.54639 0.932339ZM1.94639 10.5677L9.54639 18.0677L11.6536 15.9323L4.05361 8.43234L1.94639 10.5677ZM3 11H22V8H3V11Z" fill="#00373F"/>
+                </svg>                    
+            </div>
+            <span>Retourner à la page précédente</span>
+        </a>
+        <form class="profile changemdp" action="" method="POST" style="height:430px">
+            <div class="title">Changer mon mot de passe</div>
+            <div class="input passwordorigin" style="height:79px;">
+                <div class="title">Mot de passe actuel</div>
+                <input type="password" name="passwordorigin" id="passwordorigin" pattern="[A-Za-z0-9]{18}" placeholder="Mot de passge actuel">
+                <div class="showpassword" id="togglePasswordorigin">
+                    <svg width="22" height="16" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7703 6C17.7703 5.64119 17.5762 5.40556 17.188 4.93429C15.768 3.21014 12.6357 0 9.00001 0C5.36428 0 2.23207 3.21014 0.81198 4.93429C0.423817 5.40556 0.229736 5.64119 0.229736 6C0.229736 6.35881 0.423817 6.59444 0.811979 7.06571C2.23207 8.78986 5.36428 12 9.00001 12C12.6357 12 15.768 8.78986 17.188 7.06571C17.5762 6.59444 17.7703 6.35881 17.7703 6ZM9.00002 9C10.6569 9 12 7.65685 12 6C12 4.34315 10.6569 3 9.00002 3C7.34316 3 6.00002 4.34315 6.00002 6C6.00002 7.65685 7.34316 9 9.00002 9Z" fill="#00606B"/>
+                    </svg>                        
+                </div>
+
+                <div class="hiddepassword hidden" id="hiddePasswordorigin">
+                    <svg width="22" height="21" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2371 14.1157C16.0484 13.3833 16.7137 12.6416 17.188 12.0657C17.5762 11.5944 17.7703 11.3588 17.7703 11C17.7703 10.6412 17.5762 10.4056 17.188 9.93429C15.768 8.21014 12.6357 5 9.00001 5C8.16052 5 7.34787 5.17115 6.57695 5.45563L9.12383 8.00251C10.6822 8.06577 11.9342 9.31781 11.9975 10.8762L15.2371 14.1157ZM6.39308 9.5144C6.14295 9.95239 6.00001 10.4595 6.00001 11C6.00001 12.6569 7.34316 14 9.00001 14C9.54051 14 10.0476 13.8571 10.4856 13.6069L12.7872 15.9085C11.636 16.5555 10.3529 17 9.00001 17C5.36428 17 2.23207 13.7899 0.811979 12.0657C0.423817 11.5944 0.229736 11.3588 0.229736 11C0.229736 10.6412 0.423817 10.4056 0.81198 9.93429C1.48541 9.11667 2.54385 7.96489 3.85842 6.97974L6.39308 9.5144Z" fill="#00606B"/>
+                        <path d="M2 1L18 17" stroke="#00606B" stroke-width="2"/>
+                    </svg>                        
+                </div>
+            </div>
+            <div class="input passwordorigin" style="height:79px;">
+                <div class="title">Nouveau mot de passe</div>
+                <input type="password" name="passwordorigin" id="newpassword" pattern="[A-Za-z0-9]{18}" placeholder="Mot de passge actuel">
+                <div class="showpassword" id="togglePasswordnew">
+                    <svg width="22" height="16" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7703 6C17.7703 5.64119 17.5762 5.40556 17.188 4.93429C15.768 3.21014 12.6357 0 9.00001 0C5.36428 0 2.23207 3.21014 0.81198 4.93429C0.423817 5.40556 0.229736 5.64119 0.229736 6C0.229736 6.35881 0.423817 6.59444 0.811979 7.06571C2.23207 8.78986 5.36428 12 9.00001 12C12.6357 12 15.768 8.78986 17.188 7.06571C17.5762 6.59444 17.7703 6.35881 17.7703 6ZM9.00002 9C10.6569 9 12 7.65685 12 6C12 4.34315 10.6569 3 9.00002 3C7.34316 3 6.00002 4.34315 6.00002 6C6.00002 7.65685 7.34316 9 9.00002 9Z" fill="#00606B"/>
+                    </svg>                        
+                </div>
+
+                <div class="hiddepassword hidden" id="hiddePasswordnew">
+                    <svg width="22" height="21" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2371 14.1157C16.0484 13.3833 16.7137 12.6416 17.188 12.0657C17.5762 11.5944 17.7703 11.3588 17.7703 11C17.7703 10.6412 17.5762 10.4056 17.188 9.93429C15.768 8.21014 12.6357 5 9.00001 5C8.16052 5 7.34787 5.17115 6.57695 5.45563L9.12383 8.00251C10.6822 8.06577 11.9342 9.31781 11.9975 10.8762L15.2371 14.1157ZM6.39308 9.5144C6.14295 9.95239 6.00001 10.4595 6.00001 11C6.00001 12.6569 7.34316 14 9.00001 14C9.54051 14 10.0476 13.8571 10.4856 13.6069L12.7872 15.9085C11.636 16.5555 10.3529 17 9.00001 17C5.36428 17 2.23207 13.7899 0.811979 12.0657C0.423817 11.5944 0.229736 11.3588 0.229736 11C0.229736 10.6412 0.423817 10.4056 0.81198 9.93429C1.48541 9.11667 2.54385 7.96489 3.85842 6.97974L6.39308 9.5144Z" fill="#00606B"/>
+                        <path d="M2 1L18 17" stroke="#00606B" stroke-width="2"/>
+                    </svg>                        
+                </div>
+            </div>
+            <div class="input passwordorigin" style="height:79px;">
+                <div class="title">Cinformation du nouveau mot de passe</div>
+                <input type="password" name="passwordorigin" id="newpasswordconfirm" pattern="[A-Za-z0-9]{18}" placeholder="Mot de passge actuel">
+                <div class="showpassword" id="togglePasswordnewconfirm">
+                    <svg width="22" height="16" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7703 6C17.7703 5.64119 17.5762 5.40556 17.188 4.93429C15.768 3.21014 12.6357 0 9.00001 0C5.36428 0 2.23207 3.21014 0.81198 4.93429C0.423817 5.40556 0.229736 5.64119 0.229736 6C0.229736 6.35881 0.423817 6.59444 0.811979 7.06571C2.23207 8.78986 5.36428 12 9.00001 12C12.6357 12 15.768 8.78986 17.188 7.06571C17.5762 6.59444 17.7703 6.35881 17.7703 6ZM9.00002 9C10.6569 9 12 7.65685 12 6C12 4.34315 10.6569 3 9.00002 3C7.34316 3 6.00002 4.34315 6.00002 6C6.00002 7.65685 7.34316 9 9.00002 9Z" fill="#00606B"/>
+                    </svg>                        
+                </div>
+
+                <div class="hiddepassword hidden" id="hiddePasswordnewconfirm">
+                    <svg width="22" height="21" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2371 14.1157C16.0484 13.3833 16.7137 12.6416 17.188 12.0657C17.5762 11.5944 17.7703 11.3588 17.7703 11C17.7703 10.6412 17.5762 10.4056 17.188 9.93429C15.768 8.21014 12.6357 5 9.00001 5C8.16052 5 7.34787 5.17115 6.57695 5.45563L9.12383 8.00251C10.6822 8.06577 11.9342 9.31781 11.9975 10.8762L15.2371 14.1157ZM6.39308 9.5144C6.14295 9.95239 6.00001 10.4595 6.00001 11C6.00001 12.6569 7.34316 14 9.00001 14C9.54051 14 10.0476 13.8571 10.4856 13.6069L12.7872 15.9085C11.636 16.5555 10.3529 17 9.00001 17C5.36428 17 2.23207 13.7899 0.811979 12.0657C0.423817 11.5944 0.229736 11.3588 0.229736 11C0.229736 10.6412 0.423817 10.4056 0.81198 9.93429C1.48541 9.11667 2.54385 7.96489 3.85842 6.97974L6.39308 9.5144Z" fill="#00606B"/>
+                        <path d="M2 1L18 17" stroke="#00606B" stroke-width="2"/>
+                    </svg>                        
+                </div>
+            </div>
+            <button type="submit" class="changemdp">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6C0 3.17157 0 1.75736 0.87868 0.87868C1.75736 0 3.17157 0 6 0H12.3431C13.1606 0 13.5694 0 13.9369 0.152241C14.3045 0.304482 14.5935 0.593512 15.1716 1.17157L16.8284 2.82843C17.4065 3.40649 17.6955 3.69552 17.8478 4.06306C18 4.4306 18 4.83935 18 5.65685V12C18 14.8284 18 16.2426 17.1213 17.1213C16.48 17.7626 15.5534 17.9359 14 17.9827V15L14 14.9384C14.0001 14.2843 14.0001 13.6965 13.9362 13.2208C13.8663 12.7015 13.7042 12.1687 13.2678 11.7322C12.8313 11.2958 12.2985 11.1337 11.7792 11.0638C11.3034 10.9999 10.7157 10.9999 10.0616 11L10 11H7L6.93839 11C6.28427 10.9999 5.69655 10.9999 5.22084 11.0638C4.70149 11.1337 4.16867 11.2958 3.73223 11.7322C3.29579 12.1687 3.13366 12.7015 3.06383 13.2208C2.99988 13.6965 2.99993 14.2843 3 14.9384L3 15V17.9239C2.02491 17.828 1.36857 17.6112 0.87868 17.1213C0 16.2426 0 14.8284 0 12V6ZM12 15V18H6C5.64496 18 5.31221 18 5 17.9983V15C5 14.2646 5.00212 13.8137 5.046 13.4873C5.08457 13.2005 5.13942 13.1526 5.14592 13.1469L5.14645 13.1464L5.14692 13.1459C5.1526 13.1394 5.20049 13.0846 5.48734 13.046C5.81369 13.0021 6.26462 13 7 13H10C10.7354 13 11.1863 13.0021 11.5127 13.046C11.7995 13.0846 11.8474 13.1394 11.8531 13.1459L11.8536 13.1464L11.8541 13.1469C11.8606 13.1526 11.9154 13.2005 11.954 13.4873C11.9979 13.8137 12 14.2646 12 15ZM4 4C3.44772 4 3 4.44772 3 5C3 5.55228 3.44772 6 4 6H9C9.55228 6 10 5.55228 10 5C10 4.44772 9.55228 4 9 4H4Z" fill="#F8BF88"/>
+                </svg>
+                <span>Enregistrer mon nouveau mot de passe</span>
+            </button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/showpass.js"></script>
+</body>
+</html>
